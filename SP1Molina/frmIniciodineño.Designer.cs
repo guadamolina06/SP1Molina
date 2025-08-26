@@ -28,46 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblBienvenido = new Label();
-            btnAceptar = new Button();
+            lblSintepartSRL = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // lblBienvenido
+            // lblSintepartSRL
             // 
-            lblBienvenido.AutoSize = true;
-            lblBienvenido.BorderStyle = BorderStyle.Fixed3D;
-            lblBienvenido.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            lblBienvenido.Location = new Point(105, 66);
-            lblBienvenido.Name = "lblBienvenido";
-            lblBienvenido.Size = new Size(351, 47);
-            lblBienvenido.TabIndex = 0;
-            lblBienvenido.Text = "Bienvedido al Sistema";
+            lblSintepartSRL.AutoSize = true;
+            lblSintepartSRL.BorderStyle = BorderStyle.Fixed3D;
+            lblSintepartSRL.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
+            lblSintepartSRL.Location = new Point(136, 21);
+            lblSintepartSRL.Name = "lblSintepartSRL";
+            lblSintepartSRL.Size = new Size(279, 56);
+            lblSintepartSRL.TabIndex = 0;
+            lblSintepartSRL.Text = "Sintepart SRL";
             // 
-            // btnAceptar
+            // pictureBox1
             // 
-            btnAceptar.Location = new Point(224, 219);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(120, 30);
-            btnAceptar.TabIndex = 1;
-            btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
+            pictureBox1.Image = Properties.Resources.fiat;
+            pictureBox1.Location = new Point(148, 124);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(258, 195);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // frmIniciodineño
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(579, 341);
-            Controls.Add(btnAceptar);
-            Controls.Add(lblBienvenido);
+            Controls.Add(pictureBox1);
+            Controls.Add(lblSintepartSRL);
             Name = "frmIniciodineño";
             Text = "Inicio";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lblBienvenido;
-        private Button btnAceptar;
+        private Label lblSintepartSRL;
+        private PictureBox pictureBox1;
     }
 }
