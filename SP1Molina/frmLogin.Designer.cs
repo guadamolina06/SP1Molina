@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             lblUsuario = new Label();
             lblContraseña = new Label();
             lblMódulo = new Label();
             txtUsuario = new TextBox();
             txtContraseña = new TextBox();
             lstMódulo = new ComboBox();
-            button1 = new Button();
+            btnAceptar = new Button();
             btnCancelar = new Button();
             SuspendLayout();
             // 
@@ -88,30 +89,33 @@
             txtContraseña.PasswordChar = '#';
             txtContraseña.Size = new Size(155, 23);
             txtContraseña.TabIndex = 4;
+            txtContraseña.TextChanged += txtContraseña_TextChanged;
             // 
             // lstMódulo
             // 
             lstMódulo.DropDownStyle = ComboBoxStyle.DropDownList;
+            lstMódulo.Enabled = false;
             lstMódulo.FormattingEnabled = true;
-            lstMódulo.Items.AddRange(new object[] { "ADM", "SIST", "COM", "VTA" });
             lstMódulo.Location = new Point(178, 188);
             lstMódulo.Name = "lstMódulo";
             lstMódulo.Size = new Size(155, 23);
             lstMódulo.TabIndex = 5;
+            lstMódulo.SelectedIndexChanged += lstMódulo_SelectedIndexChanged;
             // 
-            // button1
+            // btnAceptar
             // 
-            button1.Location = new Point(395, 43);
-            button1.Name = "button1";
-            button1.Size = new Size(77, 21);
-            button1.TabIndex = 6;
-            button1.Text = "Aceptar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnAceptar.Enabled = false;
+            btnAceptar.Location = new Point(256, 253);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(77, 21);
+            btnAceptar.TabIndex = 6;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(395, 114);
+            btnCancelar.Location = new Point(157, 253);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(77, 21);
             btnCancelar.TabIndex = 7;
@@ -123,17 +127,19 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(530, 278);
+            ClientSize = new Size(353, 298);
             Controls.Add(btnCancelar);
-            Controls.Add(button1);
+            Controls.Add(btnAceptar);
             Controls.Add(lstMódulo);
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
             Controls.Add(lblMódulo);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmLogin";
-            Text = "frmLogin";
+            Text = "Login";
+            Load += frmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,7 +152,7 @@
         private TextBox txtUsuario;
         private TextBox txtContraseña;
         private ComboBox lstMódulo;
-        private Button button1;
+        private Button btnAceptar;
         private Button btnCancelar;
     }
 }

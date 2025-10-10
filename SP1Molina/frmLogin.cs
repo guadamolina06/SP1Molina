@@ -18,10 +18,8 @@ namespace SP1Molina
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-
-
             frmIniciodineño iniciodineño = new frmIniciodineño();
             iniciodineño.ShowDialog();
         }
@@ -41,7 +39,39 @@ namespace SP1Molina
             }
             else
             {
-                txtContraseña.Enabled=true;
+                txtContraseña.Enabled = true;
+            }
+        }
+
+        private void lstMódulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstMódulo.SelectedIndex != -1)
+            {
+                btnAceptar.Enabled = true;
+            }
+            else
+            {
+                btnAceptar.Enabled = false;
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            lstMódulo.Items.Add("ADM");
+            lstMódulo.Items.Add("SIST");
+            lstMódulo.Items.Add("COM");
+            lstMódulo.Items.Add("VTA");
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "")
+            {
+                lstMódulo.Enabled = false;
+            }
+            else
+            {
+                lstMódulo.Enabled = true;
             }
         }
     }
