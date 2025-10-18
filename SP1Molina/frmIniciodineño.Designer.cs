@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIniciodineño));
             lblSintepartSRL = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -61,6 +62,7 @@
             ClientSize = new Size(579, 341);
             Controls.Add(pictureBox1);
             Controls.Add(lblSintepartSRL);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmIniciodineño";
             Text = "Inicio";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
